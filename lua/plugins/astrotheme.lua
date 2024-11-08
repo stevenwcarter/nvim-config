@@ -3,7 +3,7 @@ return {
     "astrotheme",
     opts = {
       style = {
-        transparent = false, -- Bool value, toggles transparency.
+        transparent = true, -- Bool value, toggles transparency.
       },
     },
   },
