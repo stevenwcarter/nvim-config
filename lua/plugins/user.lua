@@ -117,4 +117,31 @@ return {
       },
     },
   },
+  {
+    "antonk52/bad-practices.nvim",
+    opts = {},
+  },
+  {
+    "m4xshen/smartcolumn.nvim",
+    event = { "InsertEnter", "User AstroFile" },
+    opts = {
+      scope = "window",
+      colorcolumn = "100",
+      disabled_filetypes = { "alpha", "neo-tree", "ministarter", "help", "text", "markdown", "oil", "octo" },
+    },
+  },
+  {
+    "RRethy/vim-illuminate",
+    event = "User AstroFile",
+    opts = {},
+    config = function(_, opts) require("illuminate").configure(opts) end,
+    specs = {
+      {
+        "catppuccin",
+        optional = true,
+        ---@type CatppuccinOptions
+        opts = { integrations = { illuminate = true } },
+      },
+    },
+  },
 }
