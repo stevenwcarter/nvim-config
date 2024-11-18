@@ -117,10 +117,10 @@ return {
       },
     },
   },
-  {
-    "antonk52/bad-practices.nvim",
-    opts = {},
-  },
+  -- {
+  --   "antonk52/bad-practices.nvim",
+  --   opts = {},
+  -- },
   {
     "m4xshen/smartcolumn.nvim",
     event = { "InsertEnter", "User AstroFile" },
