@@ -31,6 +31,7 @@ return {
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   -- { import = "astrocommunity.media.codesnap-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  -- adds guides for jump shortcuts
   -- { import = "astrocommunity.workflow.precognition-nvim" },
   -- import/override with your plugins folder
 }
