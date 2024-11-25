@@ -3,6 +3,13 @@ local function diagnostic_goto(dir, severity)
   if type(severity) == "string" then severity = vim.diagnostic.severity[severity] end
   return function() go { severity = severity } end
 end
+
+vim.opt.conceallevel = 2
+
+vim.cmd [[syntax match htmlComment /<!--\zs.*\ze-->/ conceal]]
+-- vim.cmd [[syntax region htmlComment start=<!-- end=--> contained]]
+-- vim.cmd [[highlight link htmlComment Comment"]]
+
 ---@type LazySpec
 return {
 
@@ -143,5 +150,10 @@ return {
         opts = { integrations = { illuminate = true } },
       },
     },
+  },
+  taplo = {
+    filetypes = { "toml" },
+    -- IMPORTANT: this is required for taplo LSP to work in non-git repositories
+    root_dir = require("lspconfig.util").root_pattern("*.toml", ".git"),
   },
 }
