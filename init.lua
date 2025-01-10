@@ -18,5 +18,8 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- vim.opt.cmdheight = 3
+-- vim.opt.shortmess = "ltToOCFW"
+
 require "lazy_setup"
 require "polish"
