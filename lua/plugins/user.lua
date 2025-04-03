@@ -138,6 +138,16 @@ return {
     },
   },
   {
+    "nvim-telekasten/calendar-vim",
+  },
+  {
+    "renerocksai/telekasten.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    opts = {
+      home = vim.fn.expand "~/zettelkasten",
+    },
+  },
+  {
     "RRethy/vim-illuminate",
     event = "User AstroFile",
     opts = {},

@@ -41,7 +41,53 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       -- first key is the mode
+      i = {
+        ["[["] = {
+          function() require("telekasten").insert_link() end,
+          desc = "Insert zettelkasten link",
+        },
+      },
       n = {
+        ["<Leader>z"] = {
+          function() require("telekasten").panel() end,
+          desc = "Zettelkasten panel",
+        },
+        ["<Leader>zs"] = {
+          function() require("telekasten").search_notes() end,
+          desc = "Search notes",
+        },
+        ["<Leader>zd"] = {
+          function() require("telekasten").goto_today() end,
+          desc = "Daily note",
+        },
+        ["<Leader>zw"] = {
+          function() require("telekasten").goto_thisweek() end,
+          desc = "Weekly note",
+        },
+        ["<Leader>zz"] = {
+          function() require("telekasten").follow_link() end,
+          desc = "Follow link",
+        },
+        ["<Leader>zn"] = {
+          function() require("telekasten").new_note() end,
+          desc = "New note",
+        },
+        ["<Leader>zt"] = {
+          function() require("telekasten").new_templated_note() end,
+          desc = "New templated note",
+        },
+        ["<Leader>zc"] = {
+          function() require("telekasten").show_calendar() end,
+          desc = "Show calendar",
+        },
+        ["<Leader>zb"] = {
+          function() require("telekasten").show_backlinks() end,
+          desc = "Show backlinks",
+        },
+        ["<Leader>zI"] = {
+          function() require("telekasten").insert_img_link() end,
+          desc = "Insert image link",
+        },
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
