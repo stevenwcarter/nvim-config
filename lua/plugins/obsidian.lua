@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 local wk = require "which-key"
 wk.add {
@@ -7,6 +7,8 @@ wk.add {
   { "<leader>oD", "<Cmd>ObsidianDailies<CR>", desc = "Search recent daily notes" },
   { "<leader>od", "<Cmd>ObsidianToday<CR>", desc = "Open daily note" },
   { "<leader>oe", "<Cmd>ObsidianExtractNote<CR>", desc = "Extract note" },
+  { "<leader>off", "<Cmd>ObsidianSearch<CR>", desc = "Search notes" },
+  { "<leader>oft", "<Cmd>ObsidianTags<CR>", desc = "Search tags" },
   { "<leader>ol", "<Cmd>ObsidianLink<CR>", desc = "Links in quick list" },
   { "<leader>oL", "<Cmd>ObsidianLinks<CR>", desc = "Links in quick list" },
   { "<leader>on", "<Cmd>ObsidianNew<CR>", desc = "New note" },
@@ -14,6 +16,7 @@ wk.add {
   { "<leader>oY", "<Cmd>ObsidianYesterday<CR>", desc = "Open yesterday's daily note" },
   { "<leader>oT", "<Cmd>ObsidianTomorrow<CR>", desc = "Open tomorrow's daily note" },
   { "<leader>oo", "<Cmd>ObsidianTOC<CR>", desc = "TOC in quicklist" },
+  { "<leader>o<CR>", "<Cmd>ObsidianOpen<CR>", desc = "TOC in quicklist" },
   { "<leader>op", "<Cmd>ObsidianPasteImg<CR>", desc = "Paste image for Obsidian" },
   { "<leader>ot", "<Cmd>ObsidianTemplate<CR>", desc = "Open tomorrow's daily note" },
   { "<leader>oq", "<Cmd>ObsidianQuickSwitch<CR>", desc = "Quick switch" },
@@ -76,6 +79,47 @@ return {
       folder = "Templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M",
+    },
+    -- Optional, configure additional syntax highlighting / extmarks.
+    -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
+    ui = {
+      enable = true, -- set to false to disable all additional syntax features
+      update_debounce = 200, -- update delay after a text change (in milliseconds)
+      max_file_length = 5000, -- disable UI features for files with more than this many lines
+      -- Define how various check-boxes are displayed
+      checkboxes = {
+        -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
+        [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+        ["x"] = { char = "", hl_group = "ObsidianDone" },
+        [">"] = { char = "", hl_group = "ObsidianRightArrow" },
+        ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+        ["!"] = { char = "", hl_group = "ObsidianImportant" },
+
+        -- You can also add more custom ones...
+      },
+      -- Use bullet marks for non-checkbox lists.
+      bullets = { char = "•", hl_group = "ObsidianBullet" },
+      external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+      -- Replace the above with this if you don't have a patched font:
+      -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+      reference_text = { hl_group = "ObsidianRefText" },
+      highlight_text = { hl_group = "ObsidianHighlightText" },
+      tags = { hl_group = "ObsidianTag" },
+      block_ids = { hl_group = "ObsidianBlockID" },
+      hl_groups = {
+        -- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
+        ObsidianTodo = { bold = true, fg = "#f78c6c" },
+        ObsidianDone = { bold = true, fg = "#89ddff" },
+        ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
+        ObsidianTilde = { bold = true, fg = "#ff5370" },
+        ObsidianImportant = { bold = true, fg = "#d73128" },
+        ObsidianBullet = { bold = true, fg = "#89ddff" },
+        ObsidianRefText = { underline = true, fg = "#c792ea" },
+        ObsidianExtLinkIcon = { fg = "#c792ea" },
+        ObsidianTag = { italic = true, fg = "#66cc66" },
+        ObsidianBlockID = { italic = true, fg = "#89ddff" },
+        ObsidianHighlightText = { bg = "#75662e" },
+      },
     },
     mappings = {
       ["gf"] = {

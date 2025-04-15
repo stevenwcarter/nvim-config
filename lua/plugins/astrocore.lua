@@ -48,6 +48,19 @@ return {
         },
       },
       n = {
+        -- ["<Leader>o"] = { desc = "Orgmode" },
+        -- ["<Leader>or"] = {
+        --   function() require("telescope").extensions.orgmode.refile_heading() end,
+        --   desc = "Refile heading",
+        -- },
+        -- ["<Leader>of"] = {
+        --   function() require("telescope").extensions.orgmode.search_headings() end,
+        --   desc = "Search headings",
+        -- },
+        -- ["<Leader>ol"] = {
+        --   function() require("telescope").extensions.orgmode.insert_link() end,
+        --   desc = "Insert link",
+        -- },
         ["<Leader>z"] = {
           function() require("telekasten").panel() end,
           desc = "Zettelkasten panel",
