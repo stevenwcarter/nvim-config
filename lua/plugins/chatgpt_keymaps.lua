@@ -1,0 +1,11 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- return {
+--   {
+--     "jackMort/ChatGPT.nvim",
+--     keys = {
+--       { "<leader>ac", "<cmd>ChatGPT<CR>", desc = "Open ChatGPT" },
+--       { "<leader>ae", "<cmd>ChatGPTEditWithInstruction<CR>", mode = "v", desc = "Edit with ChatGPT" },
+--       { "<leader>ar", "<cmd>ChatGPTRun<CR>", desc = "Run ChatGPT Actions" },
+--     },
+--   },
+-- }
