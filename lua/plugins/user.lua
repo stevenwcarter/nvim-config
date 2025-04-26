@@ -4,17 +4,9 @@ local function diagnostic_goto(dir, severity)
   return function() go { severity = severity } end
 end
 
-vim.opt.conceallevel = 2
+-- vim.opt.conceallevel = 2
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.opt_local.textwidth = 100
-    vim.opt_local.formatoptions:append "t"
-  end,
-})
-
-vim.cmd [[syntax match htmlComment /<!--\zs.*\ze-->/ conceal]]
+-- vim.cmd [[syntax match htmlComment /<!--\zs.*\ze-->/ conceal]]
 -- vim.cmd [[syntax region htmlComment start=<!-- end=--> contained]]
 -- vim.cmd [[highlight link htmlComment Comment"]]
 
@@ -151,6 +143,10 @@ return {
       -- Optional: Set up any custom Copilot configurations here
       vim.g.copilot_no_tab_map = true
       vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+      -- vim.api.nvim_set_keymap("i", "<C-]>", "copilot#Next()", { silent = true, expr = true })
+      -- vim.api.nvim_set_keymap("i", "<C-[>", "copilot#Previous()", { silent = true, expr = true })
+      -- vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+      -- vim.api.nvim_set_keymap("i", "<Nul>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
     end,
   },
   {
