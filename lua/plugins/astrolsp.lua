@@ -85,6 +85,15 @@ return {
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },
+        -- ["<C-Space>"] = cmp.mapping(function(fallback)
+        --   if cmp.visible() then
+        --     cmp.select_next_item()
+        --   elseif vim.fn["copilot#Accept"]() ~= "" then
+        --     vim.api.nvim_feedkeys(vim.fn["copilot#Accept"](), "i", true)
+        --   else
+        --     fallback()
+        --   end
+        -- end, { "i", "s" }),
         ["<Leader>uY"] = {
           function() require("astrolsp.toggles").buffer_semantic_tokens() end,
           desc = "Toggle LSP semantic highlight (buffer)",
