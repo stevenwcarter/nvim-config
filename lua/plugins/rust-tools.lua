@@ -91,6 +91,9 @@ return {
         ---@type AstroLSPOpts
         opts = {
           handlers = { rust_analyzer = false }, -- disable setup of `rust_analyzer`
+          tools = {
+            -- test_executor = "background",
+          },
         },
       },
     },
