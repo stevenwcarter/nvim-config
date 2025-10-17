@@ -7,11 +7,11 @@ local function diagnostic_goto(dir, severity)
 end
 
 local Terminal = require("toggleterm.terminal").Terminal
-local float_term = Terminal:new({ direction = "float", hidden = true })
+local float_term = Terminal:new { direction = "float", hidden = true }
 
 vim.keymap.set("n", "<C-\\>", function() float_term:toggle() end)
 vim.keymap.set("t", "<C-\\>", function()
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), 'n', true)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", true)
   float_term:toggle()
 end)
 
@@ -38,6 +38,7 @@ return {
     "folke/snacks.nvim",
     opts = {
       dashboard = {
+        enabled = true,
         preset = {
           header = table.concat({
             " █████  ███████ ████████ ██████   ██████ ",
@@ -151,13 +152,13 @@ return {
   {
     "nvim-telekasten/calendar-vim",
   },
-  {
-    "renerocksai/telekasten.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim" },
-    opts = {
-      home = vim.fn.expand "~/zettelkasten",
-    },
-  },
+  -- {
+  --   "renerocksai/telekasten.nvim",
+  --   dependencies = { "nvim-telescope/telescope.nvim" },
+  --   opts = {
+  --     home = vim.fn.expand "~/zettelkasten",
+  --   },
+  -- },
   -- {
   --   "stevearc/conform.nvim",
   --   event = { "BufWritePre" },

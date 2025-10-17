@@ -6,7 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.recipes.cache-colorscheme" },
-  { import = "astrocommunity.recipes.auto-session-restore" },
+  -- { import = "astrocommunity.recipes.auto-session-restore" },
   -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
