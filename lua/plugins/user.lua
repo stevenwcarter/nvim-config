@@ -1,5 +1,17 @@
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
+vim.opt.scrolloff = 10
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if client and client.name == "vtsls" then
+      client.server_capabilities.documentFormattingProvider = false
+      client.server_capabilities.documentRangeFormattingProvider = false
+    end
+  end,
+})
+
 local function diagnostic_goto(dir, severity)
   local go = vim.diagnostic["goto_" .. (dir and "next" or "prev")]
   if type(severity) == "string" then severity = vim.diagnostic.severity[severity] end

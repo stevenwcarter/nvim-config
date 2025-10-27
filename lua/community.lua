@@ -10,6 +10,7 @@ return {
   -- { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.html-css" },
