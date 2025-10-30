@@ -132,6 +132,15 @@ return {
             "<Cmd>Coverage<CR>",
             desc = "Load coverage",
           },
+          ["<leader>Tr"] = { desc = "Rust coverage" },
+          ["<leader>Trr"] = {
+            "<Cmd>CoverageRust<CR>",
+            desc = "Generate and load Rust coverage",
+          },
+          ["<leader>Trl"] = {
+            "<Cmd>CoverageRustLoad<CR>",
+            desc = "Load Rust coverage",
+          },
           ["<leader>ts"] = {
             "<Cmd>CoverageSummary<CR>",
             desc = "Show coverage summary",
