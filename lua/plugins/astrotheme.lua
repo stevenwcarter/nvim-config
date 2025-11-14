@@ -1,12 +1,12 @@
 return {
-  {
-    "astrotheme",
-    opts = {
-      style = {
-        transparent = false, -- Bool value, toggles transparency.
-      },
-    },
-  },
+  -- {
+  --   "astrotheme",
+  --   opts = {
+  --     style = {
+  --       transparent = false, -- Bool value, toggles transparency.
+  --     },
+  --   },
+  -- },
   {
     "olimorris/onedarkpro.nvim",
     lazy = true,
@@ -24,7 +24,7 @@ return {
   {
     "folke/tokyonight.nvim",
     opts = {
-      transparent = false,
+      transparent = true,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
@@ -35,7 +35,7 @@ return {
     "tiagovla/tokyodark.nvim",
     lazy = true,
     opts = {
-      transparent_background = false,
+      transparent_background = true,
       terminal_colors = true,
     },
   },
@@ -44,7 +44,7 @@ return {
     lazy = true,
     opts = {
       options = {
-        transparent = false,
+        transparent = true,
         module_default = false,
         modules = {
           aerial = true,
