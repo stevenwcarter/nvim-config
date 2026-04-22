@@ -15,6 +15,7 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.java" },
+  -- { import = "astrocommunity.pack.rust" },
   {
     "mfussenegger/nvim-jdtls",
     opts = {

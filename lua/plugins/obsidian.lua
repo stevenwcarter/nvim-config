@@ -143,7 +143,7 @@ return {
     end,
     open_notes_in = "vsplit",
     attachments = {
-      img_folder = "Attachments",
+      folder = "Attachments",
     },
   },
 }

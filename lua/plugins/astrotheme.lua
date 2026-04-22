@@ -24,7 +24,7 @@ return {
   {
     "folke/tokyonight.nvim",
     opts = {
-      transparent = true,
+      transparent = false,
       styles = {
         sidebars = "transparent",
         floats = "transparent",
@@ -35,7 +35,7 @@ return {
     "tiagovla/tokyodark.nvim",
     lazy = true,
     opts = {
-      transparent_background = true,
+      transparent_background = false,
       terminal_colors = true,
     },
   },
@@ -44,7 +44,7 @@ return {
     lazy = true,
     opts = {
       options = {
-        transparent = true,
+        transparent = false,
         module_default = false,
         modules = {
           aerial = true,

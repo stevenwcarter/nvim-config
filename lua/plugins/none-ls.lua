@@ -44,7 +44,7 @@ return {
       opts.sources,
       require("none-ls.diagnostics.eslint_d").with {
         args = {
-          "--no-warn-ignored", -- 👈 this silences the “File ignored” warnings
+          -- "--no-warn-ignored", -- 👈 this silences the “File ignored” warnings
           "--format",
           "json",
           "--stdin",
