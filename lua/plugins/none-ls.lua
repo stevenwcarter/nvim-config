@@ -1,8 +1,6 @@
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
--- Customize None-ls sources
-
----@type LazySpec
+-- ---@type LazySpec
 return {
   "nvimtools/none-ls.nvim",
   dependencies = {
@@ -10,8 +8,6 @@ return {
   },
   opts = function(_, opts)
     -- opts variable is the default configuration table for the setup function call
-    local null_ls = require "null-ls"
-
     opts.root_dir = require("null-ls.utils").root_pattern(".null-ls-root", ".neoconf.json", "Makefile")
 
     local filtered_sources = {}
@@ -40,11 +36,12 @@ return {
       require "none-ls.formatting.eslint_d",
       require "none-ls.code_actions.eslint_d",
     })
+
     table.insert(
       opts.sources,
       require("none-ls.diagnostics.eslint_d").with {
         args = {
-          "--no-warn-ignored", -- 👈 this silences the “File ignored” warnings
+          -- "--no-warn-ignored", -- 👈 this silences the “File ignored” warnings
           "--format",
           "json",
           "--stdin",

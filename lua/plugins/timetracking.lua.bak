@@ -1,0 +1,21 @@
+return {
+  "stevenwcarter/time-tracking-nvim",
+  config = function() require("time-tracking-nvim").setup() end,
+}
+-- return {
+--   dir = vim.fn.stdpath "config" .. "/lua/custom/timetracking",
+--   name = "timetracking-preview",
+--   event = "VeryLazy",
+--   config = function()
+--     require("custom.timetracking").setup {
+--       directory = "~/.time-tracking",
+--     }
+--   end,
+-- }
+
+-- return {
+--   dir = vim.fn.stdpath "config" .. "/lua/custom/time_tracking_nvim",
+--   name = "time_tracking_nvim",
+--   event = "VeryLazy",
+--   config = function() require("custom.time_tracking_nvim").setup() end,
+-- }

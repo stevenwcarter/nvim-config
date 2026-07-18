@@ -47,7 +47,7 @@ return {
         transparent = true,
         module_default = false,
         modules = {
-          aerial = true,
+          -- aerial = true,
           cmp = true,
           ["dap-ui"] = true,
           dashboard = true,

@@ -11,6 +11,8 @@ return {
     opts = {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        -- eslint_d support
+        "eslint-lsp",
         -- install language servers
         "lua-language-server",
 
